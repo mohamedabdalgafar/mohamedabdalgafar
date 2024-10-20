@@ -1,0 +1,194 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00bfa5;
+    padding-bottom: 10px;
+}
+
+p, ul {
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Hero Section */
+header .hero {
+    background: linear-gradient(to bottom right, #00695c, #004d40);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+header .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header .hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.contact-btn {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+    background-color: #f57c00;
+    transform: translateY(-3px);
+}
+
+/* Fixed Navigation Menu */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.nav-menu li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Add padding for better clickability */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.nav-menu a:hover {
+    background-color: #00bfa5; /* Change background on hover */
+    color: #fff; /* Ensure text color remains readable */
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* About Section */
+.profile-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Space from the heading */
+    position: relative; /* Position for absolute child */
+}
+
+.profile-photo {
+    width: 120px; /* Set width of the profile photo */
+    height: 120px; /* Set height of the profile photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.profile-text {
+    max-width: 600px; /* Max width for text container */
+    z-index: 1; /* Ensure text is above the image */
+}
+
+/* Footer */
+footer {
+    background-color: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between items */
+}
+
+.skill-item {
+    background: #ffffff; /* White background for skill items */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px; /* Padding inside each item */
+    display: flex; /* Flex for icon and text */
+    align-items: center; /* Center items vertically */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.skill-item i {
+    font-size: 2rem; /* Larger icon size */
+    color: #00bfa5; /* Icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.skill-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Additional Media Query for Responsiveness */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
+}
+
